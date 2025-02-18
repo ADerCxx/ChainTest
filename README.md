@@ -1,39 +1,34 @@
 # ChainTest
 
-This template should help get you started developing with Vue 3 in Vite.
+> Vue3项目工具链测试，工具链旨在方便开发，团队之间的协作更流畅。
 
-## Recommended IDE Setup
+&nbsp;&nbsp;首先要确定的是各个插件工具的分工是什么？
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## [EsLint](https://zh-hans.eslint.org/docs/latest/use/core-concepts)
 
-## Type Support for `.vue` Imports in TS
+`EsLint`是一个可配置的`JavaScript`检查器。它可以帮助你发现并修复`JavaScript`代码中的问题。问题可以指潜在的运行时漏洞、未使用的最佳实践、风格问题等。
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+规则是`EsLint`的核心构建块。规则会验证你的代码是否符合预期，以及如果不符合预期怎么做。规则还可以包含针对该规则的额外配置项。
 
-## Customize configuration
+## [StyleLint](https://www.stylelint.cn/)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+`StyleLint`是一个强大、先进的CSS代码检测器，可以帮助你规避`CSS`中的错误并保持一致的编码风格。
 
-## Project Setup
+这个插件库界限就比较分明，顾名思义便是专门管理样式格式的库。
 
-```sh
-npm install
-```
+## [prettier](https://www.prettier.cn/)
 
-### Compile and Hot-Reload for Development
+`Prettier`是一款代码格式化工具，支持大量编程语言，在大多数`IDE`中都有集成。
 
-```sh
-npm run dev
-```
+---
 
-### Type-Check, Compile and Minify for Production
+在以往的项目中，时不时会遇到各种各样的工具链问题👇
 
-```sh
-npm run build
-```
+1. 代码格式化完全失效
+2. 样式代码按要求格式化，`script`代码和`template`代码格式化失效
+3. 代码突然报红
+4. ......
 
-### Lint with [ESLint](https://eslint.org/)
+问题多种多样，且很容易出现兼容性问题，十分麻烦，故出现此项目，希望能整理一下各个插件和库之间的关系，方便理顺脉络，出现问题后能及时定位，尽快解决。
 
-```sh
-npm run lint
-```
+在整理出以上几个插件库的介绍后会发现，`eslint`和`prettier`都能进行代码格式化（排除stylellint是因为它比较专），所以平时遇到的很多工具链问题有不少是因为这俩插件库冲突而导致的。
