@@ -1,0 +1,6 @@
+# 禁用文件
+*.min.css
+
+# 禁用的目录
+dist
+node_modules
