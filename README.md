@@ -45,10 +45,18 @@ stylelint 16
 
 按正常思考逻辑，先写好配置文件，再看看有哪些需要的包。
 
-思考❓
+**思考❓**
 
 &emsp;&emsp;加入了库，写好配置文件，`IDE`中安装好插件就可以有效果了吗？答案是否定的，并不会这么简单，在以往的实践中，可以看到`package.json`文件中还记录到有其他相关的包，譬如一个项目css库选择`less`，在实际搭建工具链的时候，你就需要找到`stylelint`中配置`less`相关的包，并使用对应的配置项。
 
 <div align=center><img src="./readmeImage/img1.png"></div>
 
 &emsp;&emsp;可见，找出对应配置项已有难度，更别说有对应包了，且很容易有版本问题（先前项目中就遇到过，一个有正常工具链的项目突然有一天报错的问题，可能是某个同事更新过某个工具包），尽管相应的包起名有迹可循，但当某个项目需要从0到1开始构建时，所耗费的时间成本是比较高的。
+
+### 2.20
+
+主要熟悉了`stylelint`中的一些规则使用，理解`plugins`的出处和用法。
+
+在引用插件之后你还可以在配置文件中自定义该插件中的配置，具体见 ➡ [plugins](https://www.stylelint.cn/user-guide/configure#plugins)
+
+[一些stylelint插件](https://www.stylelint.cn/awesome-stylelint#plugins)
