@@ -60,3 +60,26 @@ stylelint 16
 在引用插件之后你还可以在配置文件中自定义该插件中的配置，具体见 ➡ [plugins](https://www.stylelint.cn/user-guide/configure#plugins)
 
 [一些stylelint插件](https://www.stylelint.cn/awesome-stylelint#plugins)
+
+### 2.21
+
+`stylelint`工具链配置基本完成
+
+本次配置可以知悉的是，`vscode`的相关插件就是同相关库一起使用的，可以这么理解👇
+
+1. 对代码排序、格式化等操作，都是需要`IDE`来实现的（就是`IDE`是最终完成类似动作的"人"）。
+
+2. 如何使`IDE`去做出这些动作呢？那便是需要相关的插件，通常是需要使用到专用的库去驱动这些插件，譬如`stylelint`插件，便是需要`stylelint`相关的库去驱动。
+
+3. 再就是你的个人行为，按照你或团队的代码风格，进行自定义配置，譬如[stylelint的配置文件](https://www.stylelint.cn/user-guide/configure)。
+
+4. 与此同时，你还需要对这些`IDE`插件进行配置，就类似`IDE`中的一些常规配置，对插件也是如此（`.vscode`中的`setting.json`，这个文件就是针对`vscode`的配置）。
+
+```json
+// setting.json
+// 本质其实就是修改stylelint插件中validate字段的值，哪些文件需要验证
+// 你可以看到你对vscode（包括插件）的一些特殊配置修改后会在这份文件中反映，HBuilder中的配置也是类似，可以在图形化界面配置，也可以在专门管理配置的一份json文件配置
+{
+  "stylelint.validate": ["css", "less", "postcss", "scss", "sass", "vue"]
+}
+```
