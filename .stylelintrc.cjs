@@ -14,6 +14,10 @@ module.exports = {
     { files: ['**/*.(less|css|vue|html)'], customSyntax: 'postcss-less' },
     { files: ['**/*.(html|vue)'], customSyntax: 'postcss-html' },
   ],
+  /**
+   * null => 关闭规则
+   * always => 必须
+   */
   rules: {
     // 关键字指定大小写
     'value-keyword-case': null,
