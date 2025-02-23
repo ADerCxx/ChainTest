@@ -16,7 +16,7 @@
 
 这个插件库界限就比较分明，顾名思义便是专门管理样式格式的库。
 
-## [prettier](https://www.prettier.cn/)
+## [Prettier](https://www.prettier.cn/)
 
 `Prettier`是一款代码格式化工具，支持大量编程语言，在大多数`IDE`中都有集成。
 
@@ -33,7 +33,7 @@
 
 [插件写法](https://www.postcss.com.cn/docs/writing-a-postcss-plugin#step-create-an-idea)
 
-## `PostCss`自我介绍就是一个使用JS插件转换样式的工具，这也意味着你可以用用`PostCss`的`api`去创造一个专属的插件！😍
+**`PostCss`自我介绍就是一个使用JS插件转换样式的工具，这也意味着你可以用用`PostCss`的`api`去创造一个专属的插件！😍**
 
 在以往的项目中，时不时会遇到各种各样的工具链问题👇
 
@@ -114,4 +114,20 @@ module.exports = {
 }
 ```
 
-1
+### 2.23
+
+今天特地留意一下工具链完备的项目的`vscode`设置文件
+
+```ts
+"prettier.enable": false
+```
+
+也是发现原来`prettier`一直是被禁用掉的。这也打消了我的疑虑，因为`prettier`是一个用于代码格式化的工具，而`eslint`不仅可以做团队的自定义代码规范，还能有检测`JavaScript/TypeScript`代码功能。
+
+在使用脚手架创建Vue3项目是发现有`jiti`这个包。👇
+
+> 对于 Deno 和 Bun，TypeScript 配置文件是原生支持的；对于 Node.js，你必须在项目中安装 2.0.0 或更高版本的可选 dev 依赖 jiti（ESLint 不会自动安装此依赖）
+
+**对比以往项目和当前用脚手架创建的新`Vue3`项目自带的`eslint.config.xx`文件有所出入。**
+
+&emsp;&emsp;
